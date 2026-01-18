@@ -1,0 +1,15 @@
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+accelerate>=0.20.0
+datasets>=2.10.0
+vllm>=0.3.0
+safetensors>=0.3.0
+timm>=0.6.13
+pillow>=9.0.0
+opencv-python>=4.6.0
+sentencepiece>=0.1.97
+huggingface-hub>=0.13.0
+bitsandbytes>=0.39.0
+einops>=0.6.0
+tqdm>=4.64.0
