@@ -118,10 +118,12 @@ dataset[2]["text"]
 
 """We can also render the LaTeX in the browser directly!"""
 
-from IPython.display import display, Math, Latex
+# Removed IPython.display and replaced with plain file writing
 
+# Save LaTeX representation to a file
 latex = dataset[2]["text"]
-display(Math(latex))
+with open("latex_output.txt", "w") as f:
+    f.write(latex)
 
 """To format the dataset, all vision finetuning tasks should be formatted as follows:
 
