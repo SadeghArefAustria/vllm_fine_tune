@@ -2,22 +2,20 @@
 import torch
 from unsloth import FastVisionModel
 from datasets import load_dataset
-from transformers import TextStreamer
-from unsloth.trainer import UnslothVisionDataCollator
-from trl import SFTTrainer, SFTConfig
+dataset = load_dataset("unsloth/LaTeX_OCR", split = "train")
 
-from model_setup import load_model_and_tokenizer
-from data_processing import load_and_process_dataset
-from training import train_model
-from inference import run_inference
+"""Let's take an overview look at the dataset. We shall see what the 3rd image is, and what caption it had."""
 
-# Load model and tokenizer
-model, tokenizer = load_model_and_tokenizer()
+dataset
 
-# Load and process dataset
-dataset, converted_dataset = load_and_process_dataset()
+dataset[2]["image"]
 
-# Save LaTeX representation to a file
+dataset[2]["text"]
+
+"""We can also render the LaTeX in the browser directly!"""
+
+from IPython.display import display, Math, Latex
+
 latex = dataset[2]["text"]
 with open("latex_output.txt", "w") as f:
     f.write(latex)
