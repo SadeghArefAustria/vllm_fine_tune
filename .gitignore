@@ -1,0 +1,7 @@
+.venv/
+Python-3.10.12/
+__pycache__/
+qwen3/unsloth_compiled_cache
+qwen3/lora_model/
+qwen3/outputs/
+qwen3/latex_output.txt  
